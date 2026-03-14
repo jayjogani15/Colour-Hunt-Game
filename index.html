@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Hunt | Professional Stroop Effect Game</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="feedback-flash"></div>
+
+    <div id="app-container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active glass-card">
+            <h1>Color Hunt</h1>
+            <p class="subtitle">The ultimate Stroop Effect challenge. Focus on the ink color, ignore the word!</p>
+            <div style="margin-bottom: 2rem;">
+                <p style="font-size: 0.9rem; color: var(--text-muted);">High Score: <span id="high-score">0</span></p>
+            </div>
+            <button id="start-btn" class="btn-primary">Start Hunting</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen glass-card">
+            <div id="combo-display">COMBO X5!</div>
+            <div id="color-word">READY?</div>
+            
+            <div id="btn-grid" class="grid-container">
+                <!-- Color buttons will be injected here -->
+            </div>
+
+            <div class="timer-wrapper">
+                <div id="timer-progress"></div>
+            </div>
+
+            <div class="stats-bar">
+                <div class="stat-item">Score: <span id="current-score">0</span></div>
+                <div class="stat-item">Time: <span id="timer-val">30</span>s</div>
+            </div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over-screen" class="screen glass-card">
+            <h1>Game Over</h1>
+            <p class="subtitle">Impressive focus! Here's how you did:</p>
+            <div style="font-size: 4rem; font-weight: 900; margin: 1rem 0; color: var(--primary);">
+                <span id="final-score">0</span>
+            </div>
+            <p style="margin-bottom: 2rem; color: var(--text-muted);">Points Collected</p>
+            <button id="restart-btn" class="btn-primary">Try Again</button>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
